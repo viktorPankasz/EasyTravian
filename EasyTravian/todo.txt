@@ -1,0 +1,43 @@
+﻿Javítások
+	PIAC!
+	piac építése page miatt
+
+ikonokat megkeresni a benti gépemen
+
+fő gombok:
+- mentés, lemez ikon
+
+számláló kijelzők
+	- visszaszámlálót javítani ha még nincs inicializálva illetve, ha inaktív
+
+Építés:
+- prioritás
+	ha van anyag a prioritást élvező épületre, akkor elsődlegesen annak építése kezdődjön meg
+	prioritás típusai:
+	a/ kizárólagos (hiába van anyag másra, ennek kell épülni előbb)
+	b/ opcionális (ha nincs rá anyag, de épülhet más, akkor mást fog építeni)
+
+Rally point
+	- feldolgozva teljes listában
+	- szűrhető lehessen kategóriánként, stb (devexpress grid)
+	- támadás tedektor
+	- seregmentés
+
+Alkalmazás ikonját cserélni (valamire? óvatosan azért ezzel:)
+
+
+// ---------------
+2012.4-től  T4
+- page-ek megjelenése
+	piac : 1. page építés, 2. page küldés 
+	gyülekező
+	dorf2 új épület
+		Infrastruktúra
+		http://tx3.travian.hu/build.php?id=30&category=1
+		Katonaság
+		http://tx3.travian.hu/build.php?id=30&category=2
+		Nyersi
+		http://tx3.travian.hu/build.php?id=30&category=3
+
+van ilyen classname hogy villogtathassák az éppen épülőt:
+	"19 underConstruction"

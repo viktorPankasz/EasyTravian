@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="AuthService.asmx.cs" Class="EasyTravian.WS.Service1" %>

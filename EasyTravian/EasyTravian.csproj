@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9E0B9A4-8A49-41F2-9ED9-A144865907E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyTravian</RootNamespace>
+    <AssemblyName>EasyTravian</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ManifestCertificateThumbprint>F1A3205C406F3051048A0B5650DF6ABC9E140B75</ManifestCertificateThumbprint>
+    <ManifestKeyFile>EasyTravian_2_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <StartupObject>EasyTravian.Program</StartupObject>
+    <ApplicationIcon>images.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <PublishUrl>ftp://ftp.eebhosting.com/public_html/easytravian/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.devinfo.hu/easytravian/</InstallUrl>
+    <SupportUrl>http://www.devinfo.hu/easytravian/</SupportUrl>
+    <ProductName>EasyTravian</ProductName>
+    <PublisherName>Infinity</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>4.2.4.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Builder\TravianBaseBuild.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map\MapCollector.cs" />
+    <Compile Include="Map\MapPainter.cs" />
+    <Compile Include="Map\TravianBaseMap.cs" />
+    <Compile Include="Market\TravianBaseMarket.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\RegisterNewForm.resx">
+      <DependentUpon>RegisterNewForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Translate\TranslatorForm.resx">
+      <DependentUpon>TranslatorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RallyPoint\TravianBaseFarmList.cs" />
+    <Compile Include="RallyPoint\TravianBaseRally.cs" />
+    <Compile Include="Register\Register.cs" />
+    <Compile Include="Register\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\RegisterForm.designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\RegisterNewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\RegisterNewForm.Designer.cs">
+      <DependentUpon>RegisterNewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Helpers.cs" />
+    <Compile Include="Tools\Logger.cs" />
+    <Compile Include="Tools\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\LoginForm.designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Settings.cs" />
+    <Compile Include="Tools\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\SettingsForm.designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\xpath.cs" />
+    <Compile Include="Translate\Translator.cs" />
+    <Compile Include="Translate\TranslatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Translate\TranslatorForm.Designer.cs">
+      <DependentUpon>TranslatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TravanBaseParse.cs" />
+    <Compile Include="TravianBase.cs" />
+    <Compile Include="TraviController.cs" />
+    <Compile Include="Travimail.cs" />
+    <Compile Include="TroopSend\TroopSend.cs" />
+    <Compile Include="Types\BuildingCostsFill.cs" />
+    <Compile Include="Types\Config.cs" />
+    <Compile Include="Types\Farm.cs" />
+    <Compile Include="Types\Globals.cs" />
+    <Compile Include="Types\Market.cs" />
+    <Compile Include="Types\Prerequisites.cs" />
+    <Compile Include="Types\ResourceMaps.cs" />
+    <Compile Include="Types\SerializableDictionary.cs" />
+    <Compile Include="Types\TraviHtmlPath.cs" />
+    <Compile Include="Types\TraviData.cs" />
+    <Compile Include="Types\TraviTypes.cs" />
+    <Compile Include="Types\Troop.cs" />
+    <Compile Include="Types\VillageData.cs" />
+    <Compile Include="Web References\ETService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\quest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\correct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\error2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\factory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\gears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pics\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images.ico" />
+    <Content Include="lang.1038.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pics\home.png" />
+    <Content Include="pics\reload.png" />
+    <Content Include="todo.txt" />
+    <None Include="EasyTravian_2_TemporaryKey.pfx" />
+    <None Include="EasyTravian_TemporaryKey.pfx" />
+    <None Include="Resources\expand.jpg" />
+    <None Include="Resources\collapse.jpg" />
+    <None Include="Web References\ETService\AuthService.disco" />
+    <None Include="app.config" />
+    <None Include="Resources\icon.ico" />
+    <None Include="Web References\ETService\AuthService.wsdl" />
+    <None Include="Web References\ETService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://b0y0.dyndns.org/EasyTravian/AuthService.asmx%3fop=Authorize">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ETService\</RelPath>
+      <UpdateFromURL>http://b0y0.dyndns.org/EasyTravian/AuthService.asmx%3fop=Authorize</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>EasyTravian_ETService_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="lang.1038.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="todo.txt">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Reactor_Output="[main_assembly_dir]EasyTravian_Secure\EasyTravian.exe" Reactor_Project="" Reactor_Commands="" Reactor_Automatic="1" Reactor_Lib="0" Reactor_Enabled="1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
